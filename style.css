@@ -1,0 +1,158 @@
+body {
+    background: linear-gradient(to right, #000000, #434343);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Ensure no scrolling */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    overflow: hidden; /* Ensure no scrolling within the container */
+}
+
+#rose1 path {
+    stroke: #ffeb3b;
+}
+
+#rose2 path {
+    stroke: #ff4081;
+}
+
+#rose3 path {
+    stroke: #2196f3;
+}
+
+#XMLID_226_ {
+    animation: draw 10s forwards, colorChange 10s infinite, scaleUp 10s infinite, rotate 10s infinite;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 600;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes colorChange1 {
+    0% {
+        stroke: #ffeb3b;
+    }
+    50% {
+        stroke: #880e4f;
+    }
+    100% {
+        stroke: #ffeb3b;
+    }
+}
+
+@keyframes colorChange2 {
+    0% {
+        stroke: #ff4081;
+    }
+    50% {
+        stroke: #ffeb3b;
+    }
+    100% {
+        stroke: #ff4081;
+    }
+}
+
+@keyframes colorChange3 {
+    0% {
+        stroke: #2196f3;
+    }
+    50% {
+        stroke: #ff4081;
+    }
+    100% {
+        stroke: #2196f3;
+    }
+}
+
+#XMLID_226_#rose1 {
+    animation: colorChange1 5s infinite;
+}
+
+#XMLID_226_#rose2 {
+    animation: colorChange2 5s infinite;
+}
+
+#XMLID_226_#rose3 {
+    animation: colorChange3 5s infinite;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #ff4081;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute; /* Position the footer at the bottom */
+    bottom: 0;
+}
+
+footer p {
+    background: linear-gradient(to right, #2ad1ef, #e43134);
+    -webkit-background-clip: text;
+    color: transparent; /* Make the text color transparent to show the gradient */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .modern-text {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+
+    .container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        justify-content: center;
+    }
+
+    svg {
+        width: 80%; /* Adjust SVG size for smaller screens */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-text {
+        font-size: 1.5em; /* Further adjust font size for very small screens */
+    }
+
+    svg {
+        width: 90%; /* Further adjust SVG size for very small screens */
+    }
+}
